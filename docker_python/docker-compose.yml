@@ -1,0 +1,11 @@
+version: "3"
+services:
+  app:
+    container_name: "python"
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: python_ubuntu18.04
+    volumes:
+      - $PWD/:/app
+    command: python3 /app/src/exec.py
