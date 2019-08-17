@@ -1,0 +1,14 @@
+version: "3"
+services:
+  app:
+    container_name: "data_science"
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: data_science
+    user: jovyan
+    ports:
+      - "10001:8888"
+#    volumes:
+#      - $PWD/:/home/jovyan
+#    command: python3 /app/src/exec.py
