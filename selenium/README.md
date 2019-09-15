@@ -27,15 +27,15 @@ selenium-hub   /opt/bin/entry_point.sh   Up      0.0.0.0:4444->4444/tcp
 ```
 ### サンプルスクリプトの実行
 実行方法は3種類
-#### docker-composeの実行尾コマンドを使う
+#### 1.docker-composeの実行のコマンドを使う
 ```
 docker-compose run python_run
 ```
-#### dockerの実行コマンドを使う
+#### 2.dockerの実行コマンドを使う
 ```bash
 $ docker exec -it python /root/script/sample.py
 ```
-#### docker内に入り、実行
+#### 3.docker内に入り、実行
 ```bash
 $ docker exec -it python /bin/bash
 $ python /root/script/sample.py
