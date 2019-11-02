@@ -25,21 +25,30 @@ chrome         /opt/bin/entry_point.sh   Up      0.0.0.0:5900->5900/tcp
 python         tail -f /dev/null         Up
 selenium-hub   /opt/bin/entry_point.sh   Up      0.0.0.0:4444->4444/tcp
 ```
+### サンプルスクリプトの実行
+実行方法は3種類
+#### 1.docker-composeの実行のコマンドを使う
+```
+docker-compose run python_run
+```
+#### 2.dockerの実行コマンドを使う
+```bash
+$ docker exec -it python /root/script/sample.py
+```
+#### 3.docker内に入り、実行
+```bash
+$ docker exec -it python /bin/bash
+$ python /root/script/sample.py
+```
+
+実行するとGoogleにアクセスしてスクリーンショットを取得します。
+script/imagesディレクトリに画像ファイルが保存されます。
 
 ### 終了方法
 
 ```bash
 $ docker-compose down
 ```
-
-### サンプルスクリプトの実行
-
-```bash
-$ docker exec -it python /root/script/sample.py
-```
-
-実行するとGoogleにアクセスしてスクリーンショットを取得します。
-script/imagesディレクトリに画像ファイルが保存されます。
 
 ### VNC接続によるデバッグ
 `VNC`で接続するとブラウザの動きを確認しながらデバッグすることができます。Docker環境のIPアドレスにVNC(デフォルトは5900番ポート)でアクセスした上で、サンプルスクリプトを実行してみてください。デフォルトのパスワードは"secret"です。
