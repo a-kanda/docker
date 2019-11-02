@@ -9,5 +9,6 @@ services:
     tty: true
     volumes:
       - $PWD/:/app
+      - /work/:/work/
     working_dir: /app
-    command: python3.6 /app/src/exec.py
+    command: python3.6 ./src/exec.py

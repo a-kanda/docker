@@ -9,9 +9,9 @@ ARG root_directory=/app/
 COPY . ${root_directory}/
 
 # pythonの実行環境をインストール
-#WORKDIR ${root_directory}/pip/
-#RUN pip install --upgrade pip
-#RUN pip install -r requirements.txt
+WORKDIR ${root_directory}/pip/
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
 
 #ソースファイルの取得
 #WORKDIR ${root_directory}/src
