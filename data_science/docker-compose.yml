@@ -9,6 +9,7 @@ services:
     user: jovyan
     ports:
       - "10001:8888"
-#    volumes:
-#      - $PWD/:/home/jovyan
+    volumes:
+      - /work/scraping_data/:/home/jovyan/work/scraping_data/
+      - /work/git/:/home/jovyan/work/git/
 #    command: python3 /app/src/exec.py
